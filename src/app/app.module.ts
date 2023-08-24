@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
-import { SearchComponent } from './components/search/search.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ShortlyComponent } from './components/shortly/shortly.component';
@@ -13,7 +12,6 @@ import { ShortlyComponent } from './components/shortly/shortly.component';
   declarations: [
     AppComponent,
     HomeComponent,
-    SearchComponent,
     NavbarComponent,
     FooterComponent,
     ShortlyComponent
