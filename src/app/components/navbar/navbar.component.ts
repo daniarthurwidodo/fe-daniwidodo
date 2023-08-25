@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
+  signUpButton = "Sign Up"
+  signUpButtonStyle = "rounded-full"
+
+  nav = [
+    { label : "Features", link : "/features"},
+    { label : "Pricing", link : "/pricing"},
+    { label : "Resources", link : "/resources"}
+
+  ]
+  
 
 }

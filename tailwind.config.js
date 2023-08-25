@@ -4,8 +4,17 @@ module.exports = {
     "./src/**/*.{html,ts}",
   ],
   theme: {
-    extend: {},
-  },
+    extend: {
+       fontFamily: {
+          'poppins': ['Poppins'],
+       },
+       backgroundImage: {
+        'bg-boost-desktop': "url('src/assets/images/bg-boost-desktop.svg')",
+        'bg-shorten-desktop': "url('src/assets/images/bg-shorten-desktop.svg')",
+
+      }
+    }
+ },
   plugins: [],
 }
 

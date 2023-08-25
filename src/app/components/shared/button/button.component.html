@@ -1,0 +1,4 @@
+<button class="bg-teal-400 hover:bg-teal-600 focus:bg-teal-900   text-white font-bold py-2 px-4  w-32" [ngClass]="style" >
+    <span *ngIf="isLoading===false">{{label}}</span>
+    <app-loading class="h-2" *ngIf="isLoading===true"></app-loading>
+</button>

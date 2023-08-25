@@ -7,6 +7,11 @@ import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ShortlyComponent } from './components/shortly/shortly.component';
+import { ButtonComponent } from './components/shared/button/button.component';
+import { LoadingComponent } from './components/shared/loading/loading.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -14,11 +19,15 @@ import { ShortlyComponent } from './components/shortly/shortly.component';
     HomeComponent,
     NavbarComponent,
     FooterComponent,
-    ShortlyComponent
+    ShortlyComponent,
+    ButtonComponent,
+    LoadingComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

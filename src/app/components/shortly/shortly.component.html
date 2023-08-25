@@ -1,1 +1,29 @@
-<p>shortly works!</p>
+<div>
+    <section class="bg-violet-800 h-32 rounded flex flex-col justify-center bg-bg-shorten-desktop">
+        <div >
+            <form class="flex flex-row justify-center gap-3 px-8">
+                <input 
+                    [formControl]="inputString"  
+                    placeholder="Enter you link here" 
+                    class="shadow appearance-none border-4 rounded w-full py-2 px-4 text-gray-700 leading-tight  focus:border-blue-400 hover:border-blue-400 active:border-blue-400 focus:outline-none focus:shadow-outline"
+                    [ngClass]="shortenSuccess === 0 ? 'border-transparent' : '' " 
+                    [ngClass]="shortenSuccess === 1 ? 'border-teal-500' : '' " 
+                    [ngClass]="shortenSuccess === 2 ? 'border-red-400' : '' " 
+                    type="url">
+                <app-button (click)="getShortly($event)" [isLoading]="isLoading" [label]="shorthenLabel"></app-button>
+            </form>
+        </div>
+    </section>
+
+    <!-- will show if shorthenArray > 0 -->
+    <section class="mt-3" *ngIf="shorthenArray.length > 0">
+        <p class="mt-3">Your links</p>
+        <div class="h-16 shadow rounded w-full mt-3" *ngFor="let short of shorthenArray; let i = index">
+            <div class="flex flex-row px-8 py-2 gap-6" style="align-items: center;" >
+                <p class="flex-1 font-semibold">{{short.original}}</p>
+                <p class="font-semibold text-teal-400">{{short.shorten}}</p>
+                <app-button (click)="putToClipboard(i)" [label]="copyLabel"></app-button>
+            </div>
+        </div>
+    </section>
+</div>
