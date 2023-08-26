@@ -1,28 +1,37 @@
 <div>
-    <section class="bg-violet-800 h-32 rounded flex flex-col justify-center bg-bg-shorten-desktop">
-        <div >
-            <form class="flex flex-row justify-center gap-3 px-8">
-                <input 
-                    [formControl]="inputString"  
-                    placeholder="Enter you link here" 
-                    class="shadow appearance-none border-4 rounded w-full py-2 px-4 text-gray-700 leading-tight  focus:border-blue-400 hover:border-blue-400 active:border-blue-400 focus:outline-none focus:shadow-outline"
-                    [ngClass]="shortenSuccess === 0 ? 'border-transparent' : '' " 
-                    [ngClass]="shortenSuccess === 1 ? 'border-teal-500' : '' " 
-                    [ngClass]="shortenSuccess === 2 ? 'border-red-400' : '' " 
-                    type="url">
-                <app-button (click)="getShortly($event)" [isLoading]="isLoading" [label]="shorthenLabel"></app-button>
-            </form>
-        </div>
-    </section>
+    <div class="max-[640px]:m-4">
+        <section class="bg-violet-800 h-32 rounded sm:grid grid-cols-1 gap-4 md:flex md:flex-row  justify-center bg-bg-shorten-desktop p-4">
+            <div class="sm:flex md:flex-col justify-center flex-1">
+                <form >
+                    <input 
+                        [formControl]="inputString"  
+                        placeholder="Enter you link here" 
+                        class="shadow appearance-none border-2 w-full rounded py-2 px-4 text-gray-700 leading-tight  focus:border-blue-400 hover:border-blue-400 active:border-blue-400 focus:outline-none focus:shadow-outline"
+                        [ngClass]="shortenSuccess === 0 ? 'border-transparent' : '' " 
+                        [ngClass]="shortenSuccess === 1 ? 'border-teal-500' : '' " 
+                        [ngClass]="shortenSuccess === 2 ? 'border-red-400' : '' " 
+                        type="url">
+                </form>
+            </div>
+            <div class="md:flex md:flex-col justify-center max-[640px]:mt-3 ">
+                <app-button (click)="getShortly($event)" [isLoading]="isLoading" [label]="shorthenLabel" [style]="style"></app-button>
+            </div>
+        </section>
+    </div>
+
 
     <!-- will show if shorthenArray > 0 -->
-    <section class="mt-3" *ngIf="shorthenArray.length > 0">
+    <section class="max-sm:m-4" *ngIf="shorthenArray.length > 0">
         <p class="mt-3">Your links</p>
-        <div class="h-16 shadow rounded w-full mt-3" *ngFor="let short of shorthenArray; let i = index">
-            <div class="flex flex-row px-8 py-2 gap-6" style="align-items: center;" >
-                <p class="flex-1 font-semibold">{{short.original}}</p>
-                <p class="font-semibold text-teal-400">{{short.shorten}}</p>
-                <app-button (click)="putToClipboard(i)" [label]="copyLabel"></app-button>
+        <div class="shadow rounded mt-3 md:h-auto max-[640px]:h-48" *ngFor="let short of shorthenArray; let i = index">
+            <div class="md:flex md:flex-row sm:grid sm:grid-cols-1 gap-3" >
+                <p class="flex-1 font-semibold p-4">{{short.original}}</p>
+                <div class="max-[640px]:border"></div>
+                <p class="font-semibold text-teal-400 p-4">{{short.shorten}}</p>
+                <div class="p-4">
+                    <app-button  (click)="putToClipboard(i)" [label]="copyLabel" [style]="style"></app-button>
+
+                </div>
             </div>
         </div>
     </section>

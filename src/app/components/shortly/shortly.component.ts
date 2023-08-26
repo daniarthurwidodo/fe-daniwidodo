@@ -23,6 +23,7 @@ export class ShortlyComponent {
   inputString = new FormControl('', []);
   shortenSuccess = 0 
   copyLabel = "Copy"
+  style = "w-full rounded"
 
   constructor(private shortService: ShortlyService) {
 
