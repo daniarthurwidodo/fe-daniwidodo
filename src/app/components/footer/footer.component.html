@@ -1,7 +1,7 @@
-<div class="bg-gray-800 min-h-64 py-4">
+<div class="bg-gray-800 h-max py-4">
     <div class="container mx-auto">
-        <div class="grid grid-cols-6 auto-cols-max max-sm:grid-cols-1 ">
-            <section class=" sm:h-48 ">
+        <div class="grid grid-cols-6 auto-cols-max max-sm:grid-cols-1 my-4">
+            <section class=" sm:h-48 my-2 ">
                 <div class="px-4 max-sm:flex max-sm:justify-center">
                     <a href="">
                         <svg class="fill-white hover:fill-teal-400" xmlns="http://www.w3.org/2000/svg" width="121"
@@ -13,9 +13,9 @@
                     </a>
                 </div>
             </section>
-            <section class=" col-span-4">
+            <section class=" col-span-4 my-2">
                 <div class="grid grid-cols-3 max-sm:grid-cols-1 gap-3 px-2">
-                    <div class=" ">
+                    <div class=" px-4">
                         <h5 class="text-lg font-semibold text-white mb-3 max-sm:text-center">Features</h5>
 
                         <ul *ngFor="let link of section1">
@@ -24,7 +24,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class=" ">
+                    <div class=" px-4">
                         <h5 class="text-lg font-semibold text-white mb-3 max-sm:text-center">Resources</h5>
 
                         <ul *ngFor="let link of section3">
@@ -33,7 +33,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class=" ">
+                    <div class=" px-4">
                         <h5 class="text-lg font-semibold text-white mb-3 max-sm:text-center">Company</h5>
 
                         <ul *ngFor="let link of section3">
@@ -44,8 +44,8 @@
                     </div>
                 </div>
             </section>
-            <section class=" sm:h-48">
-                <div class="flex flex-row gap-3 px-4">
+            <section class=" sm:h-48 my-2">
+                <div class="flex flex-row gap-3 px-4 justify-center">
                     <a href="">
                         <img src="../../../assets/images/icon-instagram.svg" alt="">
                     </a>

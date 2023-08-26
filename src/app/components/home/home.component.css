@@ -1,3 +1,14 @@
-.working-logo {
-    margin-right: -220px;
+.bar1 {
+    left: 48%;
+    position: absolute;
+    width: 18px;
+    height: 155px;
+    z-index: -99;
+    top: 72rem;
+}
+
+@media (width > 640px) {
+    .bar1 {
+       display: none;
+    }
 }
