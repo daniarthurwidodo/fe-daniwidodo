@@ -10,3 +10,4 @@ Things to do :
 - deploy to netlify
 
 live url : https://master--dancing-kleicha-722388.netlify.app/
+run unit test : npm run test
