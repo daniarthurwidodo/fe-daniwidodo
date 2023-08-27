@@ -1,6 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ShortlyComponent } from './shortly.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ButtonComponent } from '../shared/button/button.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 describe('ShortlyComponent', () => {
   let component: ShortlyComponent;
@@ -8,7 +11,8 @@ describe('ShortlyComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ShortlyComponent]
+      declarations: [ShortlyComponent, ButtonComponent],
+      imports: [HttpClientModule, FormsModule, ReactiveFormsModule]
     });
     fixture = TestBed.createComponent(ShortlyComponent);
     component = fixture.componentInstance;

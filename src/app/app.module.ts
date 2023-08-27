@@ -10,7 +10,7 @@ import { ShortlyComponent } from './components/shortly/shortly.component';
 import { ButtonComponent } from './components/shared/button/button.component';
 import { LoadingComponent } from './components/shared/loading/loading.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -27,6 +27,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
     ReactiveFormsModule
   ],
   providers: [],
